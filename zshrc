@@ -5,7 +5,16 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bira"
+#
+#ZSH_THEME="agnoster"
+ZSH_THEME="miloshadzic"
+#ZSH_THEME="lambda"
+
+KEYTIMEOUT=1
+
+# Alias para archivos:
+alias ll="ls -lh"
+alias la="ls -a"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -23,7 +32,7 @@ ZSH_THEME="bira"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -52,7 +61,7 @@ plugins=(git)
 export LC_ALL=en_US.utf-8 
 export LANG="$LC_ALL" 
 
-export PATH="/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/heroku/bin:/Users/genesis/.nvm/v0.10.32/bin:/Applications/MAMP/bin/php/php5.4.24/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Android Studio.app/sdk/platform-tools/:/Applications/Android Studio.app/sdk/tools/:/Applications/Postgres.app/Contents/Versions/9.3/bin/"
+export PATH="/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/heroku/bin:/Users/genesis/.nvm/v0.10.32/bin:/Applications/MAMP/bin/php/php5.4.24/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Android Studio.app/sdk/platform-tools:/Applications/Android Studio.app/sdk/tools:/Applications/Postgres.app/Contents/Versions/9.3/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -80,8 +89,8 @@ alias spotify="osascript ~/Documents/SpotifyControl.scpt"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 # vim:ft=zsh ts=2 sw=2 sts=2
 #
 # Based on agnoster's Theme - https://gist.github.com/3712874
