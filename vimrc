@@ -26,6 +26,7 @@ set hidden
 set noerrorbells
 set novisualbell
 set t_vb=
+set vb
 
 " for my zsh terminal <3
 set title
@@ -44,15 +45,17 @@ set mouse=a
 set mousehide
 set mousemodel=popup
 
+set guioptions-=r 
+set guioptions-=L
+
 " Descactiva las flechitas
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-colorscheme solarized
-
-"colorscheme jellybeans
+"colorscheme solarized
+colorscheme jellybeans
 "colorscheme zenburn 
 "colorscheme twilight 
 "colorscheme wombat 
@@ -64,7 +67,9 @@ let mapleader = ","
 
 execute pathogen#infect()
 syntax on
-filetype plugin indent on
+filetype on
+filetype plugin on
+filetype indent on
 
 set guifont=Source\ Code\ Pro\ for\ Powerline:h14 "make sure to escape the spaces in the name properly
 let g:airline_powerline_fonts = 1
@@ -94,7 +99,7 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 " Nerd Tree
 nmap <C-b> :NERDTreeToggle<cr>
 let NERDTreeIgnore = ['\.pyc$']
-set autochdir
+"set autochdir
 
 "autoremove trailing spaces
 autocmd BufWritePre *.php :%s/\s\+$//e
@@ -119,9 +124,14 @@ set number
 set backspace=2
 set ruler
 set ignorecase
-set colorcolumn=120  
+set colorcolumn=99  
 "let g:pymode = 0
 " set hlsearch
+
+"NoMatchParent" cierre / apertura de soportes más destacado de emparejamiento
+"DoMatchParent
+
+set smartindent
 
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
@@ -130,3 +140,7 @@ let g:UltiSnipsExpandTrigger       = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
 let g:UltiSnipsListSnippets        = "<c-k>" "List possible snippets based on current file
+
+
+"jsx react systanx
+let g:jsx_ext_required = 1

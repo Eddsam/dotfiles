@@ -16,6 +16,8 @@ KEYTIMEOUT=1
 alias ll="ls -lh"
 alias la="ls -a"
 
+. ~/.nvm/nvm.sh
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -61,7 +63,9 @@ plugins=(git)
 export LC_ALL=en_US.utf-8 
 export LANG="$LC_ALL" 
 
-export PATH="/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/heroku/bin:/Users/genesis/.nvm/v0.10.32/bin:/Applications/MAMP/bin/php/php5.4.24/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Android Studio.app/sdk/platform-tools:/Applications/Android Studio.app/sdk/tools:/Applications/Postgres.app/Contents/Versions/9.3/bin"
+export PATH="/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/heroku/bin:/Users/genesis/.nvm/v0.10.32/bin:/Applications/MAMP/bin/php/php5.4.24/bin:/usr/local/bin:/usr/bin:/sbin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Android\ Studio.app/sdk/platform-tools:/Applications/Android Studio.app/sdk/tools:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/Cellar/postgresql/9.4.1/bin/"
+
+#export PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/heroku/bin:/Users/genesis/.nvm/v0.10.32/bin:/Applications/MAMP/bin/php/php5.4.24/bin:/usr/local/sbin:/usr/local/bin:usr/local/share/npm/bin:/usr/local/share/lib/node_modules:/usr/bin:/bin:/usr/bin:/bin:/opt/X11/bin:/opt/local/bin:/opt/local/sbin:/Applications/Android\ Studio.app/sdk/platform-tools:/Applications/Android\ Studio.app/sdk/tools:/Applications/Postgres.app/Contents/Versions/9.3/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -110,3 +114,20 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 #
 # The aim of this theme is to only show you *relevant* information. Like most
 # prompts, it will only show git information when in a kk
+
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+export COCOS_CONSOLE_ROOT=/Users/genesis/Downloads/cocos2d-x-3.7/tools/cocos2d-console/bin
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
+
+# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
+export COCOS_TEMPLATES_ROOT=/Users/genesis/Downloads/cocos2d-x-3.7/templates
+export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+
+# Add environment variable ANDROID_SDK_ROOT for cocos2d-x
+export ANDROID_SDK_ROOT=/Applications/Android\ Studio.app/sdk/
+export PATH=$ANDROID_SDK_ROOT:$PATH
+export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
+
+# Add environment variable ANT_ROOT for cocos2d-x
+export ANT_ROOT=/usr/local/Cellar/ant/1.9.4/libexec/bin
+export PATH=$ANT_ROOT:$PATH
